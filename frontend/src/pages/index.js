@@ -10,6 +10,7 @@ import GovAuthRegister from "./gov-auth-register";
 import GovAuthDashboard from "./gov-auth-dashboard";
 import ManageMaintenanceTeam from "./gov-manage-maintenanceTeam";
 import ManageComplaints from "./gov-manage-complaints";
+import AssignComplaints from "./gov-assign-complaints";
 import CustomerLogin from "./customer-login";
 import AdminProfile from "./admin-profile";
 import CustomerDashboard from "./customer-dashboard";
@@ -27,7 +28,11 @@ import AdminComplaintPending from "./admin-complaint-pending";
 import AdminComplaintAssign from "./admin-complaint-assign";
 import AdminComplaintInprogress from "./admin-complaint-inprogress";
 import AdminComplaintResolved from "./admin-complaint-resolved";
+
 import EditComplaint from "./edit-complaint";
+
+import AdminGovUsers from "./admin-gov-users";
+
 
 export {
   Home,
@@ -41,6 +46,7 @@ export {
   GovAuthRegister,
   GovAuthDashboard,
   ManageMaintenanceTeam,
+  AssignComplaints,
   ManageComplaints,
   CustomerLogin,
   CustomerDashboard,
@@ -56,4 +62,5 @@ export {
   AdminComplaintInprogress,
   AdminComplaintResolved,
   EditComplaint
+  AdminGovUsers,
 };

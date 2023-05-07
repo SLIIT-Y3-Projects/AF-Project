@@ -111,7 +111,7 @@ export function CustomerProvider({ children }) {
       CustomerAPI.getCustomers().then((response) => {
         setCustomers(response.data);
       //console.log(products.values("productName"));
-        setIsLoading(false);
+        //setIsLoading(false);
       });
     }, []);
 
