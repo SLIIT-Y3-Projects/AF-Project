@@ -31,6 +31,8 @@ import AdminComplaintResolved from "./admin-complaint-resolved";
 import AdminGovUsers from "./admin-gov-users";
 import AdminFeedManagement from "./admin-feed-management";
 
+import EditProfile from "./civilian-edit-profile/EditProfile";
+
 export {
   Home,
   AdminLogin,
@@ -60,4 +62,5 @@ export {
   AdminComplaintResolved,
   AdminGovUsers,
   AdminFeedManagement,
+  EditProfile
 };

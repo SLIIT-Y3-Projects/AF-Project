@@ -28,6 +28,7 @@ import {
   AdminGovUsers,
   AssignComplaints,
   AdminFeedManagement,
+  EditProfile,
 } from "../pages";
 
 // Components
@@ -112,6 +113,7 @@ const AppRoutes = () => {
 
           {/*Customer Routes*/}
           <Route path="/customer/dashboard" element={<CustomerDashboard />} />
+          <Route path="/customerEdit/:id" element={<EditProfile />} />
         </Routes>
       </Router>
     </>

@@ -111,7 +111,7 @@ const ManageUsers = () => {
                     Block User
                   </button></td>
 
-                  <td><Link to={`/editprofile/${customer._id}`}>
+                  <td><Link to={`/customerEdit/${customer._id}`}>
     <button className="ml-[4rem] text-yellow-600 text-lg font-bold">
       <FaEdit className="ml-[10px]" /> Edit
     </button>
