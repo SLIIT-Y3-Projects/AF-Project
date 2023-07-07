@@ -2,12 +2,14 @@ import { useContext, useState, useEffect } from "react";
 import { RiDeleteBin2Fill } from "react-icons/ri";
 import ComplaintAPI from "../../contexts/api/ComplaintAPI";
 import {ImSearch} from "react-icons/im";
+import { Link } from "react-router-dom";
 
 const PendingComplaints = () => {
 
     const [complaints, setComplaints] = useState([]);
     const [searchTerm, setSearchTerm] = useState("");
     const id=localStorage.getItem("uId");
+	var count=0;
 
     useEffect(() => {
 		//setIsLoading(true);
@@ -15,12 +17,22 @@ const PendingComplaints = () => {
 			setComplaints(response.data);
 		//console.log(products.values("productName"));
 		//	setIsLoading(false);
+		
 		});
 	}, []);
 
+	complaints
+		.filter((elem) => elem.citizenId._id == id && elem.complaintStatus === "pending")
+		.map(
+			() => (
+			count++
+			)
+		);
+
+
     return ( 
         <>
-		{complaints != "" ?(
+		{count !== 0 ?(
 		<div>		
         <div className="flex gap-2 ml-[400px]">
 				<input
@@ -92,6 +104,16 @@ const PendingComplaints = () => {
 											<button onClick={() => deleteProduct(product._id)}>
 												<RiDeleteBin2Fill className="fill-red-600 w-[20px] h-[20px] hover:fill-red-500 -ml-5 " />
 											</button>
+										</div>
+									</td>
+									<td className="px-6 py-4">
+										<div>
+											<Link to={`/complaint/edit/${complaint._id}`}>
+											<button className="bg-gray-500 w-20 text-white rounded py-1 font-semibold hover:bg-gray-700" >
+												edit
+											</button>
+											</Link>
+											
 										</div>
 									</td>
 								</tr>
